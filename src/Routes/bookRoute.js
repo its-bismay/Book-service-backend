@@ -51,7 +51,7 @@ router.get("/all-books", protectRoute  ,async (req, res) => {
             books,
             currentPage: page,
             totalBooks,
-            totalPages: Math.cell(totalBooks / limit),
+            totalPages: Math.ceil(totalBooks / limit),
         })
 
     } catch (error) {
